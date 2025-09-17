@@ -59,4 +59,30 @@ class studentcontrolelr extends Controller
 
         return view('student', compact('studentlist'));
     }
+
+    public function studentview(Request $request){
+        $studentlist = $request->session()->get('students', []);
+
+        return view('student', compact('studentlist'));
+    }
+
+
+    public function addstudent(Request $request){
+        $request->validate([
+            'id' => 'required',
+            'name' => 'required',
+            'courseyear' => 'required',
+        ]);
+        $studentlist = $request->session()->get('students', []);
+
+        $studentlist[] = [
+            'id' => $request->id,
+            'name' => $request->name,
+            'courseyear' => $request->courseyear,
+        ];
+
+        $request->session()->put('students', $studentlist);
+
+        return redirect()->route('student.list')->with('success', 'Student added successfully.');
+    }
 }

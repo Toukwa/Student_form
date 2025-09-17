@@ -10,3 +10,6 @@ Route::get('/student', function () {
 Route::get('/viewarray', [studentcontrolelr::class, 'studarray']);
 Route::get('/viewwith', [studentcontrolelr::class, 'studWith']);
 Route::get('/viewcompact', [studentcontrolelr::class, 'studcompact']);
+
+Route::get('/viewstudents', [studentcontrolelr::class, 'studentview'])->name('student.list');
+Route::post('/student/add', [studentcontrolelr::class, 'addstudent'])->name('student.add');

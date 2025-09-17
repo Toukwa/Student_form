@@ -8,16 +8,16 @@
 
     <!-- Input Form -->
     <div class="card p-4 shadow-sm mb-4">
-      <form action="" method="">
+      <form action="{{route('student.add')}}" method="POST">
       <div class="row g-3">
         <div class="col-md-2">
-          <input type="text" class="form-control" placeholder="Student ID">
+          <input type="text" name="id" class="form-control" placeholder="Student ID" required>
         </div>
         <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="Name">
+          <input type="text" name="name" class="form-control" placeholder="Name" required>
         </div>
         <div class="col-md-3">
-          <input type="text" class="form-control" placeholder="Course and Year">
+          <input type="text" name="courseyear" class="form-control" placeholder="Course and Year" required>
         </div>
         <div class="col-md-1 d-grid">
           <button class="btn btn-primary">Add</button>
