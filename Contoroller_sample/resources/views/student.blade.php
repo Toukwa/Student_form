@@ -20,7 +20,7 @@
           <input type="text" name="courseyear" class="form-control" placeholder="Course and Year" required>
         </div>
         <div class="col-md-1 d-grid">
-          <button class="btn btn-primary">Add</button>
+          <button type="submit" class="btn btn-primary">Add</button>
         </div>
       </div>
     </form>
