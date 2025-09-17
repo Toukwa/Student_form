@@ -43,4 +43,20 @@ class studentcontrolelr extends Controller
 
         return view('student')->with('studentlist', $student);
     }
+
+    public function studcompact(){
+        $studentlist = [
+
+            ['id' => '001', 'name' => 'Karsten Clyde Turalde', 'courseyear' => 'Bsit 3C'],
+            ['id' => '002', 'name' => 'Juan Dela Cruz', 'courseyear' => 'Bsit 3A'],
+            ['id' => '003', 'name' => 'Maria Clara', 'courseyear' => 'Bsit 3B'],
+            ['id' => '004', 'name' => 'Jose Rizal', 'courseyear' => 'Bsit 3C'],
+            ['id' => '005', 'name' => 'Andres Bonifacio', 'courseyear' => 'Bsit 3A'],
+            ['id' => '006', 'name' => 'Emilio Aguinaldo', 'courseyear' => 'Bsit 3B'],
+            ['id' => '007', 'name' => 'Apolinario Mabini', 'courseyear' => 'Bsit 3C'],
+
+        ];
+
+        return view('student', compact('studentlist'));
+    }
 }

@@ -9,3 +9,4 @@ Route::get('/student', function () {
 
 Route::get('/viewarray', [studentcontrolelr::class, 'studarray']);
 Route::get('/viewwith', [studentcontrolelr::class, 'studWith']);
+Route::get('/viewcompact', [studentcontrolelr::class, 'studcompact']);
