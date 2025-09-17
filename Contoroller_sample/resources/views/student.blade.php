@@ -9,6 +9,7 @@
     <!-- Input Form -->
     <div class="card p-4 shadow-sm mb-4">
       <form action="{{route('student.add')}}" method="POST">
+      @csrf
       <div class="row g-3">
         <div class="col-md-2">
           <input type="text" name="id" class="form-control" placeholder="Student ID" required>
